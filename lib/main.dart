@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Charactor card', //타이틀 지정을 해준다.
       // theme: ThemeData(primarySwatch: Colors.blue), // 기본적인 디자인 테마지정
-      home: Mycard(),
+      home: Mycard(), //앱이 실행되면 가장먼저 보이는 경로
     );
   }
 }
@@ -23,18 +23,45 @@ class Mycard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[800], //앱의 전체적인 배경색을 지정한다.
       appBar: AppBar(
         //앱의 상단부분에 바를 만든다.
         title: Text('BBANTO'),
         centerTitle: true, //앱의 상단 부분의 바의 정렬을 센터로 해준다.
-        backgroundColor: Colors.redAccent, // 배경색을 지정하는 역할을 수행한다.
+        backgroundColor: Colors.amber[700],
+        // backgroundColor: Colors.redAccent, // 배경색을 지정하는 역할을 수행한다.
         elevation: 0.0, // 엘러그레이션 높이라는 뜻으로 앱이 븡 떠있는 느낌의 효과를 나타낸다.
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Text('Hello'), Text('Hello'), Text('Hello')],
-        ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(
+            30.0, 40.0, 0.0, 0.0), //위, 아래, 왼쪽, 오른쪽의 여백에 대한 너비를 설정한다(padding)
+        //Center(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, // 가로축 정렬
+            children: <Widget>[
+              //[]안에 정렬된 widget을 나열한다.
+              Text(
+                'Name',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0 //철자 간의 간격을 지정하는 부분이다.
+                    ),
+              ),
+              SizedBox(
+                // 보이지 않는 박스를 넣어 문자간의 간격을 주고자 할 때사용한다.(height, weidth)
+                height: 10.0,
+              ),
+              Text(
+                'BBANTO',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ]
+            // mainAxisAlignment: MainAxisAlignment.center,
+            // children: <Widget>[Text('Hello'), Text('Hello'), Text('Hello')],
+            ),
       ),
     ); //  앱화면에 다양한 것들을 표현할 수있도록 해준다(빈도화지 역할이라고 보면된다.)
   }
