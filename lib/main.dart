@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, //상단의 debug라는 빨간띠를 제거할 때 사용한다.
       title: 'Charactor card', //타이틀 지정을 해준다.
       // theme: ThemeData(primarySwatch: Colors.blue), // 기본적인 디자인 테마지정
       home: Mycard(), //앱이 실행되면 가장먼저 보이는 경로
@@ -39,6 +40,18 @@ class Mycard extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, // 가로축 정렬
             children: <Widget>[
               //[]안에 정렬된 widget을 나열한다.
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/tamamo.jpg'),
+                  radius: 60.0,
+                ),
+              ),
+              Divider(
+                height: 60.0,
+                color: Colors.grey[850],
+                thickness: 0.5,
+                endIndent: 30.0,
+              ),
               Text(
                 'Name',
                 style: TextStyle(
@@ -121,6 +134,13 @@ class Mycard extends StatelessWidget {
                     style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
                   )
                 ],
+              ),
+              Center(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/umamusme.gif'),
+                  radius: 40.0,
+                  backgroundColor: Colors.amber[800],
+                ),
               )
             ]
             // mainAxisAlignment: MainAxisAlignment.center,
