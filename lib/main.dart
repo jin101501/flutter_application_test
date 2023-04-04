@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Mycard extends StatelessWidget {
+  //동적인 부분이 하나라도 구현이 되지 않았기 때문에 StatelessWidget
   const Mycard({Key? key}) : super(key: key);
 
   @override
