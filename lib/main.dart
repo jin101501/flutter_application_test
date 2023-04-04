@@ -58,6 +58,70 @@ class Mycard extends StatelessWidget {
                     fontSize: 28.0,
                     fontWeight: FontWeight.bold),
               ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Text(
+                'BBANTO POWER LEVEL',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0 //철자 간의 간격을 지정하는 부분이다.
+                    ),
+              ),
+              SizedBox(
+                // 보이지 않는 박스를 넣어 문자간의 간격을 주고자 할 때사용한다.(height, weidth)
+                height: 10.0,
+              ),
+              Text(
+                '14',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2.0,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Row(
+                // 복수의 widget을 가로로 나열하고자 할때 사용한다.
+                children: <Widget>[
+                  Icon(Icons.check_circle_outline),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    'using lightsaber',
+                    style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                  )
+                ],
+              ),
+              Row(
+                // 복수의 widget을 가로로 나열하고자 할때 사용한다.
+                children: <Widget>[
+                  Icon(Icons.check_circle_outline),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    'face hero tattoo',
+                    style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                  )
+                ],
+              ),
+              Row(
+                // 복수의 widget을 가로로 나열하고자 할때 사용한다.
+                children: <Widget>[
+                  Icon(Icons.check_circle_outline),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    'fire flames',
+                    style: TextStyle(fontSize: 16.0, letterSpacing: 1.0),
+                  )
+                ],
+              )
             ]
             // mainAxisAlignment: MainAxisAlignment.center,
             // children: <Widget>[Text('Hello'), Text('Hello'), Text('Hello')],
