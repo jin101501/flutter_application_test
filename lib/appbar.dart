@@ -28,11 +28,28 @@ class MyPage extends StatelessWidget {
         centerTitle: true,
         elevation: 0.0,
         leading: IconButton(
+          // 아이콘 버튼이나 간단한 위젯을 왼쪽에 배치할 때
           icon: Icon(Icons.menu),
           onPressed: () {
+            // 함수의 형태로 일반 버튼이나 아이콘 버튼을 터치했을 때 일어나는 이벤트를 정의 하는 곳
             print('menu boutton is clicked');
           },
         ),
+        actions: <Widget>[
+          //복수의 아이콘 버튼 등을 오론쪽에 배치할 때
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              print('Shopping cart boutton is clicked');
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              print('Search boutton is clicked');
+            },
+          ),
+        ],
       ),
     );
   }
