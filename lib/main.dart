@@ -42,12 +42,12 @@ class Mycard extends StatelessWidget {
             children: <Widget>[
               //[]안에 정렬된 widget을 나열한다.
               Center(
-                child: CircleAvatar(
+                child: CircleAvatar(// 이미지를 원형으로 만들어 넣고자 할때 사용
                   backgroundImage: AssetImage('assets/images/tamamo.jpg'),
                   radius: 60.0,
                 ),
               ),
-              Divider(
+              Divider(//기복적으로 가로 구분선을 넣는다.
                 height: 60.0,
                 color: Colors.grey[850],
                 thickness: 0.5,
